@@ -135,6 +135,36 @@
         var emailOnlySignup = 1;
         var emailOnlyLogin = 1;
     </script>
+
+    <!-- Small dev reskin overrides: header text, button and logo sizing -->
+    <style>
+        /* Primary accent used for quick visual reskin */
+        :root { --kc-primary: #f0c040; }
+
+        #header h1 a {
+            color: var(--kc-primary) !important;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+        }
+
+        #loginBtn {
+            background: var(--kc-primary) !important;
+            color: #000 !important;
+            padding: 6px 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        /* Make the existing logo container show a banner-like image without changing files */
+        .logo_ogame {
+            background-image: url('/img/outgame/20da7e6c416e6cd5f8544a73f588e5.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 220px;
+            height: 60px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body class='en'>
 <div id="dieIE6">
@@ -165,8 +195,9 @@
 <div id="start">
     <div id="header">
         <h1>
-            <a href="{{ route('login') }}" title="OGameX - Conquer the universe">
-                OGame - Conquer the universe </a>
+            <a href="{{ route('login') }}" title="Kingdom Conquest - Dev Reskin">
+                Kingdom Conquest — Dev Reskin
+            </a>
         </h1>
         <a id="loginBtn" href="javascript:void(0)" title="Login">
             Login </a>
